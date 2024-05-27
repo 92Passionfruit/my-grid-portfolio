@@ -1,0 +1,31 @@
+{
+  "name": "grid-portfolio-server-complete",
+  "version": "1.0.0",
+  "description": "back-end demo app for Apollo's lift-off course",
+  "main": "src/index.js",
+  "scripts": {
+    "compile": "tsc",
+    "dev": "ts-node-dev --respawn ./src/index.ts",
+    "start": "npm run compile && nodemon ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^20.12.12",
+    "dotenv": "^8.6.0",
+    "nodemon": "^3.1.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "author": "Raphael Terrier @R4ph-t",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "@graphql-tools/mock": "^9.0.2",
+    "@graphql-tools/schema": "^10.0.3",
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6",
+    "ts-node": "^10.9.2"
+  }
+}
