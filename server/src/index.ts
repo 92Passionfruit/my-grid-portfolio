@@ -99,10 +99,10 @@ const projects = [
     reflection: {
       id: "reflection_05",
       blocker:
-        "Ternary operators and if statements were getting complicated and triggering errors",
+        "Ternary operators and if statements were getting complicated and triggering errors.",
       process: "research, YouTube, trial and error, ChatGPT",
       solution:
-        "learnt about React's conditional rendering with logical ANDs (&&) and used them in place of vanilla JavaScipt methods",
+        "I learnt about React's conditional rendering with logical ANDs (&&) and used them in place of vanilla JavaScipt methods.",
     },
     developmentMonth: "May",
     developmentYear: 2024,
@@ -119,7 +119,7 @@ const projects = [
     reflection: {
       id: "reflection_06",
       blocker:
-        "GraphQL does not allow mixed field types and, while my custom MonthYear scalar parsed/serialized correctly, the code was becoming increasingly complex to meet both Typescript and GraphQL's type definition needs. ",
+        "GraphQL does not allow mixed field types and, while my custom MonthYear scalar parsed/serialized correctly, the code was becoming increasingly complex to meet both Typescript and GraphQL's type definition needs.",
       process:
         "Parked the problem, rubber duck debugging, YouTube/ChatGPT research",
       solution:
