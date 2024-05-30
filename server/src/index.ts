@@ -142,7 +142,7 @@ const projects = [
       blocker:
         "Jobs errored out when queried by the name of their job family or level. Note that each job belonged to a job family and a job level (stored as associated tables in the db schema linked through foreign key relationships).",
       process:
-        "ChatGPT, versioning, peer review (internship mentor), Rails console and GraphiQL testing, parked the problem, rubber duck debugging",
+        "ChatGPT, continuous version control, peer review (internship mentor), Rails console and GraphiQL testing, parked the problem, rubber duck debugging",
       solution:
         "While my 'includes' logic loaded the associated job family and job level tables for each job, ActiveRecords needed 'joins' clauses to filter for their name attribute.",
     },
