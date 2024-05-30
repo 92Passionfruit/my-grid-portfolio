@@ -128,6 +128,27 @@ const projects = [
     developmentMonth: "May",
     developmentYear: 2024,
   },
+  {
+    id: "project_07",
+    title: "Job Library API",
+    link: "https://github.com/92Passionfruit/job-library-api/tree/main/app/graphql",
+    thumbnail:
+      "https://lh3.googleusercontent.com/pw/AP1GczNJ1G-x07G4yym1l-L31En8TrciD4aW20JJpqzl74UeQ1rqjqm0xPeFBFd-iY8b6I-shkPCWmd3y0eBIfE8bL0lyEhuynaJKwfQZKfLr8lODJT0pEs9=w2400",
+    description:
+      "A library of position descriptions (for a company's internal employee and HR use) that can be queried by title, job family or job level, as well as mutated (created/updated/deleted).",
+    developmentTools: "Ruby on Rails, GraphQL, GraphiQL",
+    reflection: {
+      id: "reflection_07",
+      blocker:
+        "Jobs errored out when queried by the name of their job family or level. Note that each job belonged to a job family and a job level (stored as associated tables in the db schema linked through foreign key relationships).",
+      process:
+        "ChatGPT, versioning, peer review (internship mentor), Rails console and GraphiQL testing, Parked the problem, rubber duck debugging",
+      solution:
+        "While my 'includes' logic loaded the associated job family and job level tables for each job, ActiveRecords needed 'joins' clauses to filter for their name attribute.",
+    },
+    developmentMonth: "May",
+    developmentYear: 2024,
+  },
 ];
 
 const mocks = {
