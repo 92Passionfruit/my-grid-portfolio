@@ -184,13 +184,15 @@ async function startApolloServer() {
 
   const server = new ApolloServer({
     schema: schemaWithMocks,
-    introspection: true, // Enable introspection
+    introspection: true, // Enable introspection in production
   });
 
   const port = parseInt(process.env.PORT, 10) || 4000; // Convert string to number
 
   // Start the server
-  const { url } = await server.listen({ port });
+  const { url } = await startStandaloneServer(server, {
+    listen: { port },
+  });
 
   console.log(`
       🚀  Server is running!
