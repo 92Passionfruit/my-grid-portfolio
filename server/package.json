@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "tsc",
     "dev": "ts-node-dev --respawn ./src/index.ts",
-    "start": "npm run compile && nodemon ./dist/index.js"
+    "start": "npm run compile && nodemon ./dist/index.js",
+    "build": "npm run compile"
   },
   "devDependencies": {
     "@types/graphql": "^14.5.0",
