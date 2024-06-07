@@ -3,6 +3,9 @@ import { createRoot } from "react-dom/client";
 import GlobalStyles from "./styles";
 import Pages from "./pages";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_GRAPHQL_ENDPOINT,
