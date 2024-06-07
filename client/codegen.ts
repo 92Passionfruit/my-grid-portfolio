@@ -1,7 +1,7 @@
 import { CodegenConfig } from "@graphql-codegen/cli";
 
 const config: CodegenConfig = {
-  schema: "https://my-apollo-server.onrender.com/graphql",
+  schema: "https://my-grid-portfolio-client.onrender.com",
   documents: ["src/**/*.tsx"],
   generates: {
     "./src/__generated__/": {
