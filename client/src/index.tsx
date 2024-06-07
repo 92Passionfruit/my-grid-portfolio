@@ -3,13 +3,6 @@ import { createRoot } from "react-dom/client";
 import GlobalStyles from "./styles";
 import Pages from "./pages";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import { defineConfig } from "vite";
-
-export default defineConfig({
-  define: {
-    "process.env": process.env,
-  },
-});
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_GRAPHQL_ENDPOINT,
