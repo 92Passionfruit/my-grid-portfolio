@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: my-apollo-server
+    env: node
+    plan: free
+    buildCommand: "npm install && npm run build"
+    startCommand: "node server/src/index.js"
+    envVars:
+      - key: PORT
+        value: 4000
