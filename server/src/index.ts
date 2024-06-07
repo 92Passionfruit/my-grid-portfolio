@@ -12,7 +12,7 @@ const projects = [
     thumbnail:
       "https://lh3.googleusercontent.com/pw/AP1GczPd-H1cvKLbQ6JnPuBdEAgkuqoU-bt2RTTY-NUuuqyEuGQ4WED4dDPH5Pa77K-SHHnX-gDIlyzk21iKefSFWk5l_R5_s9UjGFpF1zZZb8ZCICqmd8Iv=w2400",
     description:
-      "A digital form to gage employee satifaction at a company through a series of scaling, checkbox and short answer questions.",
+      "A digital form to gauge employee satisfaction at a company through a series of scaling, checkbox and short answer questions.",
     developmentTools: "HTML, CSS",
     reflection: {
       id: "reflection_01",
