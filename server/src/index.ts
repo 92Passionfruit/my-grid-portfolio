@@ -123,7 +123,7 @@ const projects = [
       process:
         "Parked the problem, rubber duck debugging, YouTube/ChatGPT research",
       solution:
-        "Server-side, I simplified the code by creating separate 'developmentMonth: String' and 'developmentYear: Int' fields. Client-side, I put them into a developmentDate container (and created one function to compare and sort both fields, returning projects in a latest-first grid.",
+        "Server-side, I simplified the code by creating separate 'developmentMonth: String' and 'developmentYear: Int' fields. Client-side, I put them into a developmentDate container (and created one function to compare and sort both fields, returning projects in a latest-first grid).",
     },
     developmentMonth: "May",
     developmentYear: 2024,
@@ -140,13 +140,34 @@ const projects = [
     reflection: {
       id: "reflection_07",
       blocker:
-        "Jobs errored out when queried by the name of their job family or level. Note that each job belonged to a job family and a job level (stored as associated tables in the db schema linked through foreign key relationships).",
+        "GraphiQL errors when queried jobs by the name of their job family or level. Note that each job belonged to a job family and a job level (stored as associated tables in the db schema linked through foreign key relationships).",
       process:
         "ChatGPT, continuous version control, peer review (internship mentor), Rails console and GraphiQL testing, parked the problem, rubber duck debugging",
       solution:
         "While my 'includes' logic loaded the associated job family and job level tables for each job, ActiveRecords needed 'joins' clauses to filter for their name attribute.",
     },
     developmentMonth: "May",
+    developmentYear: 2024,
+  },
+  {
+    id: "project_08",
+    title: "RSpec Testing",
+    link: "https://github.com/92Passionfruit/job-library-api/tree/main/spec",
+    thumbnail:
+      "https://lh3.googleusercontent.com/pw/AP1GczMlvYmX3cCdZ09t-aBCkoU6nNwG2fbu1HzmBRquMXPOgjJ8bTIThxbrTBZIWCOcUR6kAgZ7ficO0SgWJNhHE_RoYkFTCS2nUTHXiP3_ac8gLvx650N7=w2400",
+    description:
+      "Model, query and mutation (create, update, delete) tests with factories for 'Job Library API'.",
+    developmentTools: "RSpec, FactoryBot, GraphQL, Ruby on Rails",
+    reflection: {
+      id: "reflection_08",
+      blocker:
+        "Tests failing for job_create_spec (job count not updating and JSON response returning nil).",
+      process:
+        "RSpec testing (inc. printing out JSON response), ChatGPT, YouTube, forums, GraphiQL testing, parked the problem, peer review (internship mentor)",
+      solution:
+        "I needed to pass my variables with the .to_json method to convert the hash into a JSON string; the format the server's GraphQL endpoint expected and needed to understand the data and correctly process the request.",
+    },
+    developmentMonth: "June",
     developmentYear: 2024,
   },
 ];
@@ -163,11 +184,13 @@ async function startApolloServer() {
 
   const server = new ApolloServer({ schema: schemaWithMocks });
 
+  // Start the server
   const { url } = await startStandaloneServer(server);
+
   console.log(`
-    🚀  Server is running!
-    📭  Query at ${url}
-  `);
+      🚀  Server is running!
+      📭  Query at ${url}
+    `);
 }
 
 startApolloServer();

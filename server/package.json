@@ -1,7 +1,7 @@
 {
   "name": "grid-portfolio-server-complete",
   "version": "1.0.0",
-  "description": "back-end demo app for Apollo's lift-off course",
+  "description": "back-end for grid portfolio",
   "main": "src/index.js",
   "scripts": {
     "compile": "tsc",
