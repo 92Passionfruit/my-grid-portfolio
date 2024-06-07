@@ -22,7 +22,7 @@
     "test": "vitest",
     "start": "vite",
     "build": "vite build",
-    "generate": "graphql-codegen"
+    "generate": "graphql-codegen --config codegen.ts"
   },
   "browserslist": {
     "production": [
